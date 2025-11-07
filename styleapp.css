@@ -1,58 +1,66 @@
+/* ✅ Reset ค่าเริ่มต้น */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.boxhome {
-    max-width: 2000px;
-    margin: 0%;
-
+/* ✅ พื้นฐาน */
+body {
+    font-family: jedxfont, sans-serif;
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
 }
 
+.boxhome {
+    max-width: 2000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ✅ Navbar */
 nav {
     padding: 1rem;
     background-color: #333;
-
+    width: 100%;
 }
 
 .nav-box {
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .logo1 {
-    color: rgb(255, 0, 0);
+    color: red;
     font-size: 1.5rem;
     font-family: jedxfont;
-
 }
 
 .logo2 {
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 1rem;
     font-family: jedxfont;
 }
 
-
+/* ✅ เมนู */
 .Menu {
     display: flex;
     list-style: none;
     align-items: center;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .Menu li {
     margin: 0 1rem;
-    font-family: unset;
 }
 
 .Menu li a {
     color: white;
     text-decoration: none;
-    font-size: larger;
-
+    font-size: 1.2rem;
     transition: color 0.3s, transform 0.5s;
 }
 
@@ -60,137 +68,174 @@ nav {
     color: red;
 }
 
+/* ✅ ส่วนภาพหัว */
 .a-img {
     text-align: center;
     padding-top: 2rem;
-
-
-
 }
 
 .texta h1 {
     font-family: jedxfont;
     text-align: center;
     margin: 0;
-    font-size: 100px;
-
+    font-size: clamp(2rem, 8vw, 6rem); /* responsive font */
 }
 
 .texta p {
     font-family: jedxfont;
     text-align: center;
-    font-size: 30px;
-
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
+/* ✅ ส่วนเนื้อหาหลัก */
 .texts h1 {
     font-family: jedxfont;
     margin: 0;
-    font-size: 40px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     padding-top: 2rem;
     padding-left: 2rem;
 }
 
 .texts h2 {
     font-family: jedxfont;
-    margin: 0;
-    font-size: px;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     background-color: rgb(247, 231, 242);
+    font-size: clamp(1rem, 3vw, 1.8rem);
 }
 
 .texts p {
     font-family: jedxfont;
     margin: 0;
-    font-size: 20px;
-
+    font-size: 1.1rem;
     padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-.body {
-    font-family: jedxfont;
-}
-
-.Master {
+/* ✅ Layout ของแต่ละปี */
+.Master, .y1, .y2, .y3, .y4 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    gap: 2rem;
+    gap: 5rem;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.Master p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-.y4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-
-}
-
+.Master p,
+.y1 p,
+.y2 p,
+.y3 p,
 .y4 p {
-    font-size: 20px;
+    font-size: 1.1rem;
     font-family: jedxfont;
+    max-width: 600px;
 }
 
-.y3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-}
-
-.y3 p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-.y2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-}
-
-.y2 p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-.y1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-}
-
-.y1 p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-
-
+/* ✅ เส้นคั่น */
 .divider {
     height: 3px;
     background: linear-gradient(to right, transparent, #333, transparent);
     width: 100%;
-    margin: 0;
 }
 
 .dividere {
     height: 3px;
     background: linear-gradient(to right, transparent, #ff0000, transparent);
     width: 100%;
-    margin: 0;
+}
+
+/* ✅ Responsive สำหรับอุปกรณ์ต่าง ๆ */
+
+/* --- Tablet (แนวนอน, 1024px ลงไป) --- */
+@media (max-width: 1024px) {
+    .nav-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Menu {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .Master, .y1, .y2, .y3, .y4 {
+        gap: 3rem;
+    }
+
+    .texts p {
+        font-size: 1rem;
+    }
+}
+
+/* --- iPad / แท็บเล็ตแนวตั้ง (768px ลงไป) --- */
+@media (max-width: 768px) {
+    .logo1 {
+        font-size: 1.2rem;
+    }
+
+    .Menu li a {
+        font-size: 1rem;
+    }
+
+    .texta h1 {
+        font-size: 2.5rem;
+    }
+
+    .texta p {
+        font-size: 1.2rem;
+    }
+
+    .texts h1 {
+        font-size: 1.8rem;
+        padding-left: 1rem;
+    }
+
+    .texts p {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .Master, .y1, .y2, .y3, .y4 {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+}
+
+/* --- มือถือ (480px ลงไป) --- */
+@media (max-width: 480px) {
+    .logo1 {
+        font-size: 1rem;
+    }
+
+    .logo2 {
+        font-size: 0.8rem;
+    }
+
+    .Menu li a {
+        font-size: 0.9rem;
+    }
+
+    .texta h1 {
+        font-size: 2rem;
+    }
+
+    .texta p {
+        font-size: 1rem;
+    }
+
+    .texts h1 {
+        font-size: 1.5rem;
+    }
+
+    .texts p {
+        font-size: 0.95rem;
+    }
+
+    .Master, .y1, .y2, .y3, .y4 {
+        gap: 1rem;
+        padding: 1rem;
+    }
 }
