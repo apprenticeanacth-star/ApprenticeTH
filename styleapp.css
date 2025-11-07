@@ -4,55 +4,58 @@
     box-sizing: border-box;
 }
 
-.boxhome {
-    max-width: 2000px;
-    margin: 0%;
-
+/* ===== Base ===== */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* ป้องกันล้นข้าง */
+    font-family: jedxfont, sans-serif;
+    scroll-behavior: smooth;
 }
 
+.boxhome {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+/* ===== Navbar ===== */
 nav {
     padding: 1rem;
     background-color: #333;
-
 }
 
 .nav-box {
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo1 {
-    color: rgb(255, 0, 0);
-    font-size: 1.5rem;
-    font-family: jedxfont;
-
+    color: red;
+    font-size: 30px;
 }
 
 .logo2 {
-    color: rgb(255, 255, 255);
-    font-size: 1rem;
-    font-family: jedxfont;
+    color: white;
+    font-size: 20px;
 }
-
 
 .Menu {
     display: flex;
     list-style: none;
     align-items: center;
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .Menu li {
     margin: 0 1rem;
-    font-family: unset;
 }
 
 .Menu li a {
     color: white;
     text-decoration: none;
-    font-size: larger;
-
+    font-size: 30px;
     transition: color 0.3s, transform 0.5s;
 }
 
@@ -60,231 +63,156 @@ nav {
     color: red;
 }
 
+/* ===== Text Sections ===== */
 .a-img {
     text-align: center;
     padding-top: 2rem;
-
-
-
 }
 
 .texta h1 {
-    font-family: jedxfont;
     text-align: center;
-    margin: 0;
     font-size: 100px;
-
 }
 
 .texta p {
-    font-family: jedxfont;
     text-align: center;
     font-size: 30px;
-
 }
 
 .texts h1 {
-    font-family: jedxfont;
-    margin: 0;
     font-size: 40px;
     padding-top: 2rem;
     padding-left: 2rem;
 }
 
 .texts h2 {
-    font-family: jedxfont;
-    margin: 0;
-    font-size: px;
+    font-size: 25px;
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     background-color: rgb(247, 231, 242);
 }
 
 .texts p {
-    font-family: jedxfont;
-    margin: 0;
     font-size: 20px;
-
     padding-left: 2rem;
 }
 
-.body {
-    font-family: jedxfont;
-}
-
-.Master {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 2rem;
-}
-
-.Master p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-.y4 {
+/* ===== Layout Sections ===== */
+.Master, .y4, .y3, .y2, .y1 {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     gap: 10rem;
-
+    flex-wrap: wrap;
+    text-align: center;
 }
 
-.y4 p {
+.Master p, .y4 p, .y3 p, .y2 p, .y1 p {
     font-size: 20px;
-    font-family: jedxfont;
 }
 
-.y3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-}
-
-.y3 p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-.y2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-}
-
-.y2 p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-.y1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    gap: 10rem;
-}
-
-.y1 p {
-    font-size: 20px;
-    font-family: jedxfont;
-}
-
-
-
+/* ===== Divider ===== */
 .divider {
     height: 3px;
     background: linear-gradient(to right, transparent, #333, transparent);
     width: 100%;
-    margin: 0;
 }
 
 .dividere {
     height: 3px;
     background: linear-gradient(to right, transparent, #ff0000, transparent);
     width: 100%;
-    margin: 0;
 }
 
-/* ===== ปรับให้ทุกหน้าจอไม่เพี้ยน ===== */
-html, body {
-    width: 100%;
-    overflow-x: hidden; /* ป้องกันหน้าเว็บล้นด้านข้าง */
-}
+/* ===== Responsive ===== */
 
-/* สำหรับหน้าจอเล็ก (Tablet แนวนอน / iPad) */
+/* --- Tablet (แนวนอน / iPad) --- */
 @media screen and (max-width: 1024px) {
     html { font-size: 95%; }
 
-    .about-box,
-    .pat-grid {
+    .nav-box {
         flex-direction: column;
-        align-items: center;
         text-align: center;
-        gap: 2rem;
-    }
-
-    .about-img img {
-        width: 90%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .title h3 {
-        font-size: 80px;
+        gap: 0.5rem;
     }
 
     .Menu li a {
         font-size: 25px;
     }
+
+    .texta h1 {
+        font-size: 70px;
+    }
+
+    .Master, .y4, .y3, .y2, .y1 {
+        gap: 5rem;
+    }
 }
 
-/* สำหรับแท็บเล็ตและมือถือแนวตั้ง */
+/* --- แท็บเล็ตแนวตั้ง / มือถือใหญ่ --- */
 @media screen and (max-width: 768px) {
     html { font-size: 90%; }
 
-    .nav-box {
+    .Menu {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         gap: 0.5rem;
     }
 
-    .Menu {
-        flex-wrap: wrap;
-        justify-content: center;
+    .Menu li a {
+        font-size: 24px;
     }
 
-    .pat-grid img {
-        width: 80%;
-        height: auto;
-    }
-
-    .title h3 {
+    .texta h1 {
         font-size: 50px;
     }
 
-    .clock-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 1rem;
+    .texta p {
+        font-size: 22px;
+    }
+
+    .texts h1 {
+        font-size: 30px;
+        padding-left: 1rem;
+    }
+
+    .Master, .y4, .y3, .y2, .y1 {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1.5rem;
     }
 }
 
-/* สำหรับมือถือเล็ก */
+/* --- มือถือเล็ก --- */
 @media screen and (max-width: 480px) {
     html { font-size: 85%; }
-
-    .title h3 {
-        font-size: 36px;
-    }
 
     .Menu li a {
         font-size: 20px;
     }
 
-    .about-img img {
-        width: 100%;
-        height: auto;
-        border-radius: 30px;
+    .texta h1 {
+        font-size: 36px;
     }
 
-    .contact-icons {
-        flex-wrap: wrap;
-        gap: 10px;
+    .texta p {
+        font-size: 18px;
     }
 
-    .contact-icons .icon {
-        width: 45px;
-        height: 45px;
+    .texts h1 {
+        font-size: 25px;
+    }
+
+    .texts h2 {
         font-size: 20px;
     }
+
+    .Master, .y4, .y3, .y2, .y1 {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .logo1 { font-size: 25px; }
+    .logo2 { font-size: 16px; }
 }
