@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.boxhome {
+    max-width: 2000px;
+    margin: 0%;
+
+}
+
+nav {
+    padding: 1rem;
+    background-color: #333;
+
+}
+
+.nav-box {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo1 {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    font-family: jedxfont;
+
+}
+
+.logo2 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: jedxfont;
+
+}
+
+
+.Menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+
+
+}
+
+.Menu li {
+    margin: 0 1rem;
+    font-family: jedxfont;
+}
+
+.Menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+
+    transition: color 0.3s, transform 0.5s;
+}
+
+.Menu li a:hover {
+    color: red;
+}
+
+
+.about {
+    padding: 1rem;
+
+}
+
+
+.about-box {
+    display: flex;
+    font-size: 3.5rex;
+
+}
+
+.about-info {
+    width: 100;
+    padding: 2rem;
+    font-family: jedxfont;
+
+}
+
+.about-info h1 {
+    font-size: 40px;
+    color: #000000;
+
+}
+
+.about-info h3 {
+
+    font-size: 30px;
+    font-family: jedxfont;
+}
+
+
+.about-info a {
+    font-size: 30px;
+    font-family: jedxfont;
+
+}
+
+.about-info p {
+    font-family: jedxfont;
+}
+
+
+.about-img img {
+    width: 900px;
+    height: 500px;
+    padding: 0.5rem 3rem;
+     border-radius: 80px;
+    
+
+
+}
+
+.title h3 {
+    font-size: 85px;
+    text-align: center;
+    padding-top: 2rem;
+    font-family: jedxfont;
+    font-size: 130px;
+
+}
+
+.title p {
+    padding-top: 0.5rem;
+    text-align: center;
+    font-family: jedxfont;
+    font-size: 1.5rem;
+}
+
+.pat-grid {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    background-color: #dddddd;
+
+}
+
+.pat-grid img {
+    padding-top: 2rem;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+
+
+
+
+}
+
+.textp {
+    padding-left: 2rem;
+    font-size: 20px;
+}
+
+.textp h3 {
+    font-size: 30px;
+    font-family: jedxfont;
+}
+
+
+.reveal-text {
+    font-size: 24px;
+    text-align: center;
+    background-color: rgb(250, 234, 244);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.textp h1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: jedxfont;
+}
+
+.textp p {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: jedxfont;
+
+}
+
+
+
+.link {
+
+    padding: 3rem 1rem;
+}
+
+.link-box {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.item {
+
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.apprenend {
+
+    text-align: center;
+
+}
+
+.end {
+    background-color: #e4e4e4;
+    padding: 0.5rem 0.5rem;
+}
+
+.end h1 {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 1rem;
+    font-family: jedxfont;
+}
+
+.end p {
+    text-align: center;
+    font-size: 15px;
+    font-family: jedxfont;
+}
+
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+    width: 100%;
+    margin: 0;
+}
+
+.dividere {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #ff0000, transparent);
+    width: 100%;
+    margin: 0;
+}
+
+.clock-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: jedxfont;
+
+}
+
+.clock-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+.clock-card:hover {
+    transform: translateY(-5px);
+}
+
+.city {
+    font-size: 22px;
+    font-weight: 600;
+ 
+}
+
+.time {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+
+}
+
+.contact-box {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 2rem;
+}
+
+.contact-box h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icons .icon {
+    font-size: 30px;
+    color: #333;
+    background: white;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    transition: 0.25s;
+}
+
+.contact-icons .icon:hover {
+    transform: translateY(-5px);
+    color: #ff0000;
+}
+
+.location h2 {
+    padding-left: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+/* ✅ Responsive สำหรับ Tablet และ Mobile */
+@media (max-width: 1000px) {
+    .about-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* ✅ Navbar */
+    .nav-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .Menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* ✅ About */
+    .about-info h1 {
+        font-size: 28px;
+    }
+    .about-info h3 {
+        font-size: 18px;
+    }
+
+    /* ✅ Pat-grid (รูปพาร์ทเนอร์) */
+    .pat-grid {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .pat-grid img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* ✅ Title */
+    .title h3 {
+        font-size: 45px;
+    }
+
+    /* ✅ Clock card */
+    .clock-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 1rem;
+    }
+
+    .clock-card {
+        padding: 20px;
+    }
+
+    .time {
+        font-size: 32px;
+    }
+
+    /* ✅ Contact icons */
+    .contact-icons .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* ✅ Small phone */
+    .title h3 {
+        font-size: 32px;
+    }
+
+    .about-info h1 {
+        font-size: 24px;
+    }
+
+    .contact-icons .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+}
+
+.location h2 {
+    padding-left: 2rem;
+    font-size: 28px;
+    font-family: jedxfont;
+}
+
+.contact-box h2 {
+    font-family: jedxfont;
+}
+
+.body {
+    font-family: jedxfont;
+}
+
+.con h3{
+    font-family: jedxfont;
+}
+
+.con p{
+    font-family: jedxfont;
+}
+
