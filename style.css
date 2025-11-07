@@ -4,53 +4,45 @@
     box-sizing: border-box;
 }
 
-/* ✅ ตั้งค่าพื้นฐานให้ body */
-body {
-    font-family: jedxfont, sans-serif;
-    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอนในมือถือ */
-}
-
-/* ✅ ปรับโครงสร้างหลัก */
 .boxhome {
     max-width: 2000px;
-    margin: 0 auto;
-    width: 100%;
+    margin: 0%;
+
 }
 
-/* ✅ Navbar */
 nav {
     padding: 1rem;
     background-color: #333;
-    width: 100%;
+
 }
 
 .nav-box {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+
 }
 
-/* ✅ Logo */
 .logo1 {
-    color: red;
+    color: rgb(255, 0, 0);
     font-size: 30px;
     font-family: jedxfont;
+
 }
 
 .logo2 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     font-family: jedxfont;
+
 }
 
-/* ✅ เมนู */
+
 .Menu {
     display: flex;
     list-style: none;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+
+
 }
 
 .Menu li {
@@ -62,6 +54,7 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 30px;
+
     transition: color 0.3s, transform 0.5s;
 }
 
@@ -69,88 +62,231 @@ nav {
     color: red;
 }
 
-/* ✅ About Section */
+
 .about {
-    padding: 2rem;
+    padding: 1rem;
+
 }
+
 
 .about-box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    text-align: center;
+    font-size: 3.5rex;
+
 }
 
 .about-info {
-    flex: 1;
-    min-width: 300px;
+    width: 100;
     padding: 2rem;
     font-family: jedxfont;
+
 }
 
 .about-info h1 {
     font-size: 40px;
-    color: #000;
+    color: #000000;
+
 }
 
 .about-info h3 {
+
     font-size: 30px;
+    font-family: jedxfont;
 }
 
-.about-info a,
-.about-info p {
-    font-size: 20px;
+
+.about-info a {
+    font-size: 30px;
+    font-family: jedxfont;
+
 }
+
+.about-info p {
+    font-family: jedxfont;
+}
+
 
 .about-img img {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    border-radius: 50px;
+    width: 900px;
+    height: 500px;
+    padding: 0.5rem 3rem;
+     border-radius: 80px;
+    
+
+
 }
 
-/* ✅ Title */
 .title h3 {
-    font-size: clamp(45px, 8vw, 130px);
+    font-size: 85px;
     text-align: center;
     padding-top: 2rem;
     font-family: jedxfont;
+    font-size: 130px;
+
 }
 
 .title p {
     padding-top: 0.5rem;
     text-align: center;
+    font-family: jedxfont;
     font-size: 1.5rem;
 }
 
-/* ✅ Partner Grid */
 .pat-grid {
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    flex-wrap: wrap;
+    gap: 20rem;
     background-color: #dddddd;
-    padding: 2rem 1rem;
+
 }
 
 .pat-grid img {
-    width: 250px;
-    height: 250px;
+    padding-top: 2rem;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 20px;
+    border-top-left-radius: 20px;
+
+
+
+
 }
 
-/* ✅ Clock Card */
-.clock-container {
+.textp {
+    padding-left: 2rem;
+    font-size: 20px;
+}
+
+.textp h3 {
+    font-size: 30px;
+    font-family: jedxfont;
+}
+
+
+.reveal-text {
+    font-size: 24px;
+    text-align: center;
+    background-color: rgb(250, 234, 244);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.textp h1 {
+    font-size: 20px;
+    text-align: center;
+    font-family: jedxfont;
+}
+
+.textp p {
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    font-family: jedxfont;
+
+}
+
+
+
+.link {
+
+    padding: 3rem 1rem;
+}
+
+.link-box {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.item {
+
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+.item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.apprenend {
+
+    text-align: center;
+
+}
+
+.end {
+    background-color: #e4e4e4;
+    padding: 0.5rem 0.5rem;
+}
+
+.end h1 {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 1rem;
+    font-family: jedxfont;
+}
+
+.end p {
+    text-align: center;
+    font-size: 15px;
+    font-family: jedxfont;
+}
+
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #333, transparent);
+    width: 100%;
+    margin: 0;
+}
+
+.dividere {
+    height: 3px;
+    background: linear-gradient(to right, transparent, #ff0000, transparent);
+    width: 100%;
+    margin: 0;
+}
+
+.clock-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     max-width: 1100px;
     margin: auto;
-    padding: 3rem 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-family: jedxfont;
+
 }
 
 .clock-card {
@@ -165,7 +301,23 @@ nav {
     transform: translateY(-5px);
 }
 
-/* ✅ Contact Section */
+.city {
+    font-size: 22px;
+    font-weight: 600;
+ 
+}
+
+.time {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+
+}
+
 .contact-box {
     text-align: center;
     margin-top: 50px;
@@ -175,13 +327,11 @@ nav {
 .contact-box h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    font-family: jedxfont;
 }
 
 .contact-icons {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -201,57 +351,128 @@ nav {
 
 .contact-icons .icon:hover {
     transform: translateY(-5px);
-    color: red;
+    color: #ff0000;
 }
 
-/* ✅ Footer */
-.end {
-    background-color: #e4e4e4;
-    padding: 0.5rem;
-    text-align: center;
+.location h2 {
+    padding-left: 3rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 28px;
 }
-
-.end h1, .end p {
-    font-size: 15px;
-    font-family: jedxfont;
-}
-
-/* ✅ Responsive (Tablet & Mobile) */
-@media (max-width: 1024px) {
+/* ✅ Responsive สำหรับ Tablet และ Mobile */
+@media (max-width: 1000px) {
     .about-box {
         flex-direction: column;
+        text-align: center;
     }
-    .pat-grid {
-        gap: 3rem;
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+        padding: 0;
     }
 }
 
 @media (max-width: 768px) {
+
+    /* ✅ Navbar */
     .nav-box {
         flex-direction: column;
+        text-align: center;
         gap: 10px;
     }
+
     .Menu {
         flex-wrap: wrap;
+        justify-content: center;
     }
+
+    /* ✅ About */
+    .about-info h1 {
+        font-size: 28px;
+    }
+    .about-info h3 {
+        font-size: 18px;
+    }
+
+    /* ✅ Pat-grid (รูปพาร์ทเนอร์) */
+    .pat-grid {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .pat-grid img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* ✅ Title */
     .title h3 {
-        font-size: 50px;
+        font-size: 45px;
+    }
+
+    /* ✅ Clock card */
+    .clock-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 1rem;
+    }
+
+    .clock-card {
+        padding: 20px;
+    }
+
+    .time {
+        font-size: 32px;
+    }
+
+    /* ✅ Contact icons */
+    .contact-icons .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 }
 
 @media (max-width: 480px) {
+
+    /* ✅ Small phone */
     .title h3 {
         font-size: 32px;
     }
+
     .about-info h1 {
         font-size: 24px;
     }
-    .Menu li a {
-        font-size: 22px;
-    }
+
     .contact-icons .icon {
         width: 45px;
         height: 45px;
         font-size: 22px;
     }
 }
+
+.location h2 {
+    padding-left: 2rem;
+    font-size: 28px;
+    font-family: jedxfont;
+}
+
+.contact-box h2 {
+    font-family: jedxfont;
+}
+
+.body {
+    font-family: jedxfont;
+}
+
+.con h3{
+    font-family: jedxfont;
+}
+
+.con p{
+    font-family: jedxfont;
+}
+
