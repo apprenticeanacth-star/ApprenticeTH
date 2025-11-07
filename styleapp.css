@@ -194,3 +194,97 @@ nav {
     width: 100%;
     margin: 0;
 }
+
+/* ===== ปรับให้ทุกหน้าจอไม่เพี้ยน ===== */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* ป้องกันหน้าเว็บล้นด้านข้าง */
+}
+
+/* สำหรับหน้าจอเล็ก (Tablet แนวนอน / iPad) */
+@media screen and (max-width: 1024px) {
+    html { font-size: 95%; }
+
+    .about-box,
+    .pat-grid {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .about-img img {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .title h3 {
+        font-size: 80px;
+    }
+
+    .Menu li a {
+        font-size: 25px;
+    }
+}
+
+/* สำหรับแท็บเล็ตและมือถือแนวตั้ง */
+@media screen and (max-width: 768px) {
+    html { font-size: 90%; }
+
+    .nav-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .Menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pat-grid img {
+        width: 80%;
+        height: auto;
+    }
+
+    .title h3 {
+        font-size: 50px;
+    }
+
+    .clock-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 1rem;
+    }
+}
+
+/* สำหรับมือถือเล็ก */
+@media screen and (max-width: 480px) {
+    html { font-size: 85%; }
+
+    .title h3 {
+        font-size: 36px;
+    }
+
+    .Menu li a {
+        font-size: 20px;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+    }
+
+    .contact-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .contact-icons .icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
